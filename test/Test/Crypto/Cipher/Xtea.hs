@@ -55,10 +55,14 @@ prop_roundTrip_encryptDecrypt = property $ do
         Right encrypted -> encrypted
 
 -- | Test that 'encrypt' output matches the golden example.
+--
+-- This @golden.bin@ output comes from the Python @xtea@ package.
 prop_golden_example1 :: Property
 prop_golden_example1 = goldenTestByteString goldenExample1 "test/golden/xtea/example1/golden.bin"
 
 -- | Test that 'encrypt' output matches the golden example.
+--
+-- This @golden.bin@ output comes from the Node.js @xtea@ package.
 prop_golden_example2 :: Property
 prop_golden_example2 = goldenTestByteString goldenExample2 "test/golden/xtea/example2/golden.bin"
 
